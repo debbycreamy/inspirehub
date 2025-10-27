@@ -1,18 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-AOS.init({ duration: 1000 });
 
 function Contact() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e) {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-  }
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 p-6">

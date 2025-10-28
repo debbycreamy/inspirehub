@@ -4,14 +4,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Home() {
-  // ✅ Initialize AOS when page loads
+  
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-pink-50 to-purple-50 py-12 px-6 md:px-12">
-      {/* 🌟 Header Section */}
+      
       <div
         className="text-center text-white py-16 mb-16 rounded-3xl shadow-2xl 
         bg-linear-to-r from-blue-600 via-pink-500 to-purple-600"
@@ -31,7 +31,6 @@ function Home() {
         </p>
       </div>
 
-      {/* 🌸 Cards Section */}
       <div
         className="grid gap-8 md:grid-cols-3"
         data-aos="fade-up"
@@ -70,7 +69,7 @@ function Home() {
         ))}
       </div>
 
-      {/* 💬 Footer Quote Section */}
+      
       <div
         className="mt-20 text-center text-gray-600 font-medium"
         data-aos="fade-up"
